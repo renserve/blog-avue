@@ -9,7 +9,7 @@ Vue.use(VueRouter)
 //创建路由
 const createRouter = () => {
     return new VueRouter({
-        base: '/admin/',
+        base: '/',
         mode:'history',
         scrollBehavior(to, from, savedPosition) {
             if (savedPosition) {
