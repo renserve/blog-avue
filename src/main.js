@@ -32,7 +32,7 @@ Vue.prototype.uploadConfig={
     loadText: '上传中...',
     data:{modelId:store.getters.currentMenuModelId},
     accept:'image/*',
-    action: `${Vue.prototype.baseURL}/cms/file`,
+    action: `/cms/file`,
 }
 import  hljs from 'highlight.js'
 import 'highlight.js/styles/googlecode.css'
