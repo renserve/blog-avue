@@ -10,7 +10,7 @@ function resolve(dir) {
 const CompressionPlugin = require("compression-webpack-plugin")
 
 module.exports = {
-    publicPath: '/admin',
+    publicPath: '/',
     outputDir:'admin',
     lintOnSave: true,
     productionSourceMap: false,
