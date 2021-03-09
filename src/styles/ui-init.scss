@@ -1,0 +1,128 @@
+$colors:(
+    blue:#409eef,
+    red:#ea6f5a,
+    green:#0F942C,
+);
+.el-scrollbar {
+
+}
+.scrollbar-wrapper-dialog.el-scrollbar__wrap {
+    padding: 0 10px;
+    overflow-x: hidden!important;
+    max-height: 70vh;
+    margin-bottom:0!important;
+}
+//常用宽度
+@each $width in 100,120 {
+    .avue_xb_#{$width} {
+        //父级flex布局,flex-shrink:0也可以
+        width:#{$width}px;
+        min-width: #{$width}px;
+    }
+}
+@each $color in blue,red,green {
+    .row_tag_#{$color} {
+        font-weight: 600;
+        color: map-get($colors,$color);
+        padding:0 5px;
+    }
+}
+.basic-container {
+    &:first-child {
+        padding-bottom: 0;
+    }
+}
+//自定义loading容器
+#loadingContainer {
+    top: 0;
+    left: 10px;
+    position: absolute;
+    z-index: 2000;
+    background-color: rgba(255,255,255,.9);
+    margin: 0;
+    right: 10px;
+    //height: calc(100vh - 122px);
+    bottom: 0;
+    transition: opacity .3s;
+}
+//tab样式
+.avue-tabs {
+    padding: 0;
+}
+//表格行内按钮(状态)
+.row_tag_btn {
+    cursor: pointer;
+}
+//滚动条
+.basic-container > .el-card > .el-card__body {
+    min-height: calc(100vh - 122px);
+}
+.avue-main,.avue-sidebar {
+    > .el-scrollbar {
+        .el-scrollbar__wrap {
+            overflow-x: hidden!important;
+        }
+    }
+}
+//富文本编辑框展示
+.avue-crud__dialog {
+    z-index: 1111!important;
+}
+.v-modal {
+    z-index: 1110!important;
+}
+
+//图片
+.columnInsertImage {
+    width: 60px;
+    height: auto;
+}
+//展示图片
+.dialogInsertImage {
+    width: 100%;
+    height: auto;
+}
+//表格头部样式
+.avue-crud__right,.avue-crud__left {
+    display: flex;
+    align-items: center;
+    > * {
+        margin-right: 12px;
+        margin-bottom: 8px;
+        &:last-child {
+            margin-right: 0!important;
+        }
+    }
+}
+//table样式重置
+.el-table .cell {
+    max-height: 69px;
+    overflow: hidden;
+    >span {
+        display: inline-block;
+        span,div {
+            display: inline-block;
+            display: -webkit-box;
+            text-overflow: ellipsis;
+            overflow : hidden;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+    }
+}
+//el-dialog弹框
+.el-dialog__header {
+    border-bottom:1px solid #f0f0f0;
+}
+>>> .el-collapse-item__arrow {
+    display: none;
+}
+.el-collapse-item__arrow {
+    display: none;
+}
+/*
+.el-collapse-item {
+    > div[role="tab"]{
+        display: none!important;
+    }
+}*/
