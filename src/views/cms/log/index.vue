@@ -7,9 +7,9 @@
                 </template>
                 <template #right>
                     <public-crud>
-                        <!--<template #menuLeft>
-                            <el-button v-if="userInfo.id===2" :type="avueConfig.danger" @click="batchSubmit('批量删除选中日志')" class="el-icon-delete" :size="avueConfig.size"> 批量删除</el-button>
-                        </template>-->
+                        <template #menuLeft>
+                            <el-button v-if="userInfo.id===1" :type="avueConfig.danger" @click="batchSubmit('批量删除选中日志')" class="el-icon-delete" :size="avueConfig.size"> 批量删除</el-button>
+                        </template>
                         <template #expand="scope">
                             <div class="expandForm">
                                 {{JSON.parse(scope.row.content)}}
